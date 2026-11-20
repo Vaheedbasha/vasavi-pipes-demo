@@ -202,7 +202,7 @@ $manufacturing_cards = [
         'step' => '01',
         'title' => 'Virgin Polymer Compounding',
         'label' => 'MATERIAL PURITY',
-        'image' => 'assets/images/factory/about-plant.jpg',
+        'image' => 'assets/images/factory/mfg-step1-compounding.jpg',
         'desc' => 'We blend 100% virgin PVC resin with heat stabilizers and impact modifiers for maximum pipe strength.'
     ],
     [
@@ -216,14 +216,14 @@ $manufacturing_cards = [
         'step' => '03',
         'title' => 'Vacuum Cooling & Sizing',
         'label' => 'CALIBRATED ROUNDNESS',
-        'image' => 'assets/images/factory/about-plant.jpg',
+        'image' => 'assets/images/factory/mfg-step3-cooling.jpg',
         'desc' => 'Misting water baths and precision vacuum calibration tanks lock in exact outer diameters and wall thickness.'
     ],
     [
         'step' => '04',
-        'title' => 'Hydrostatic & Impact Testing',
+        'title' => 'CNC Threading & Verification',
         'label' => 'QUALITY VERIFICATION',
-        'image' => 'assets/images/factory/extrusion-line.jpg',
-        'desc' => 'Each production batch undergoes pressure burst testing and drop-weight impact verification before dispatch.'
+        'image' => 'assets/images/factory/mfg-step4-threading.jpg',
+        'desc' => 'Precision CNC lathes cut square threads on column pipes, followed by batch hydrostatic and drop-weight testing.'
     ]
 ];

@@ -68,7 +68,7 @@
 
             <div class="quality-visual reveal-on-scroll">
                 <div class="quality-card interactive-card">
-                    <?= render_media('assets/images/factory/extrusion-line.jpg', 'Quality Inspection and Extrusion Line at Guntakal Plant', 'aspect-4-3', 'QUALITY TESTING PLACEHOLDER', 'quality-media') ?>
+                    <?= render_media('assets/images/factory/quality-lab.jpg', 'Quality Inspection and Hydrostatic Testing Laboratory at Guntakal Plant', 'aspect-4-3', 'QUALITY TESTING PLACEHOLDER', 'quality-media') ?>
                     <div class="quality-visual-caption">
                         <span class="caption-tag">100% Quality Inspection</span>
                         <span class="caption-text">Virgin polymer composition &amp; pressure test verification</span>
