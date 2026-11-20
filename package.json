@@ -4,7 +4,8 @@
   "private": true,
   "description": "Vasavi Plast Industries - Single Page Industrial Website",
   "scripts": {
-    "build": "php index.php > index.html",
+    "build": "echo 'Static build ready'",
+    "build:local": "php index.php > index.html",
     "dev": "php -S 127.0.0.1:8000"
   },
   "keywords": [
