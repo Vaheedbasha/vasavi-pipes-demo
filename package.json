@@ -1,0 +1,17 @@
+{
+  "name": "vasavi-pipes-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vasavi Plast Industries - Single Page Industrial Website",
+  "scripts": {
+    "build": "php index.php > index.html",
+    "dev": "php -S 127.0.0.1:8000"
+  },
+  "keywords": [
+    "vasavi-pipes",
+    "pvc-pipes",
+    "upvc",
+    "industrial-website"
+  ],
+  "author": "Vasavi Plast Industries"
+}
