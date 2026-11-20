@@ -1,0 +1,473 @@
+/**
+ * Vasavi Plast Industries - Responsive Stylesheet
+ * Breakpoints:
+ * - Wide Desktop: >= 1440px
+ * - Laptop / Standard Desktop: 1024px - 1439px
+ * - Tablet: 768px - 1023px
+ * - Mobile: <= 767px (with narrow adjustments for <= 480px)
+ */
+
+/* ==========================================================================
+   1. Wide Desktop Adjustments (>= 1440px)
+   ========================================================================== */
+@media (min-width: 1440px) {
+    :root {
+        --container-max: 1360px;
+    }
+
+    .hero-title-overlay {
+        font-size: 4.25rem;
+    }
+
+    .section-title {
+        font-size: 2.6rem;
+    }
+}
+
+/* ==========================================================================
+   2. Medium Desktop & Laptop (1024px - 1279px)
+   ========================================================================== */
+@media (max-width: 1279px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .applications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-top {
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* ==========================================================================
+   3. Tablet (768px - 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .section {
+        padding-top: var(--space-3xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .section-hero.hero-overlay-mode {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero-title-overlay {
+        font-size: 3rem;
+    }
+
+    .hero-metrics-strip {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-visual {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .quality-visual {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .manufacturing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+/* ==========================================================================
+   4. Mobile (<= 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    :root {
+        --space-3xl: 3.5rem;
+        --space-4xl: 4rem;
+    }
+
+    .container {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .section {
+        padding-top: var(--space-3xl);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .section-hero.hero-overlay-mode {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Typography Scaledown */
+    h1, .hero-title-overlay {
+        font-size: 2.25rem;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+    }
+
+    h2, .section-title {
+        font-size: 1.85rem;
+    }
+
+    .hero-desc-overlay {
+        font-size: 1.02rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Header & Mobile Menu */
+    .desktop-nav-wrapper {
+        display: none;
+    }
+
+    .header-actions .header-cta {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    /* Mobile Navigation Drawer */
+    .mobile-nav-drawer {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 86%;
+        max-width: 340px;
+        height: 100vh;
+        background-color: var(--color-surface-white);
+        z-index: 1050;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+    }
+
+    .mobile-nav-drawer.is-open {
+        right: 0;
+    }
+
+    .mobile-nav-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.55);
+        z-index: 1040;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-nav-backdrop.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-nav-inner {
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .mobile-nav-header {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--color-border);
+        margin-bottom: 1.25rem;
+    }
+
+    .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0.5rem;
+        font-family: var(--font-heading);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        border-radius: var(--radius-sm);
+        transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active {
+        background-color: var(--color-bg-light);
+        color: var(--color-brand-accent);
+    }
+
+    .mobile-arrow {
+        width: 18px;
+        height: 18px;
+        color: var(--color-text-muted);
+    }
+
+    .mobile-nav-footer {
+        margin-top: auto;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .mobile-contact-quick {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .quick-location {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.78rem;
+        color: var(--color-text-secondary);
+    }
+
+    .quick-icon {
+        width: 14px;
+        height: 14px;
+        color: var(--color-brand-accent);
+    }
+
+    /* Hero Mobile */
+    .hero-meta-pill {
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-metrics-strip {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    /* About Mobile */
+    .about-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .about-card-badge-floating {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    /* Products Mobile */
+    .product-filter-tabs {
+        width: 100%;
+        border-radius: 16px;
+        padding: 0.35rem;
+    }
+
+    .filter-tab-btn {
+        flex: 1 1 45%;
+        text-align: center;
+        padding: 0.6rem 0.85rem;
+        font-size: 0.78rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .interactive-banner {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .cta-box-title {
+        font-size: 1.35rem;
+    }
+
+    .cta-box-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .cta-box-actions .btn {
+        width: 100%;
+    }
+
+    /* Applications Mobile */
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .interactive-notice {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .interactive-notice .btn {
+        width: 100%;
+    }
+
+    /* Manufacturing Mobile */
+    .manufacturing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .mfg-banner-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .mfg-banner-strip .btn {
+        width: 100%;
+    }
+
+    /* Quality Mobile */
+    .quality-quick-metric {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Enquiry CTA Mobile */
+    .enquiry-card-content {
+        padding: var(--space-2xl) var(--space-md);
+    }
+
+    .enquiry-title {
+        font-size: 1.75rem;
+    }
+
+    .enquiry-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .enquiry-actions .btn {
+        width: 100%;
+    }
+
+    /* Contact Mobile */
+    .contact-info-card,
+    .map-card {
+        padding: 1.35rem;
+    }
+
+    .logistics-corridors {
+        grid-template-columns: 1fr;
+    }
+
+    .company-badge-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    /* Floating WhatsApp on Mobile */
+    .floating-whatsapp-wrap {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .floating-whatsapp-btn {
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-float-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* Footer Mobile */
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom-flex {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   5. Narrow Mobile Devices (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .hero-title-overlay {
+        font-size: 2rem;
+    }
+
+    .brand-name-text {
+        font-size: 1.15rem;
+    }
+
+    .brand-sub-text {
+        font-size: 0.54rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.35rem;
+        font-size: 0.92rem;
+    }
+}
