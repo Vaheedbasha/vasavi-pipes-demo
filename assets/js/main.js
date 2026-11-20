@@ -90,6 +90,11 @@
 
         backdrop.addEventListener('click', closeMenu);
 
+        var closeBtn = document.getElementById('mobileDrawerClose');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeMenu);
+        }
+
         // Close on ESC key
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && drawer.classList.contains('is-open')) {

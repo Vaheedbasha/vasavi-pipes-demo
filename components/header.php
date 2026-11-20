@@ -33,6 +33,9 @@
                 <div class="mobile-brand">
                     <?= render_brand_logo(false) ?>
                 </div>
+                <button type="button" class="drawer-close-btn" id="mobileDrawerClose" aria-label="Close navigation menu">
+                    <?= get_icon('x') ?>
+                </button>
             </div>
             <ul class="mobile-nav-list">
                 <?php foreach ($nav_items as $item): ?>
