@@ -300,19 +300,38 @@
     }
 
     /**
-     * 7. Back-to-Top Button Handler
+     * 7. Floating Back-to-Top Button Handler (Triggered when scrolled past hero section)
      */
     function initBackToTop() {
-        var btt = document.getElementById('backToTop');
-        if (!btt) return;
+        var floatingBtt = document.getElementById('floatingBackToTopBtn');
+        var inlineBtt = document.getElementById('backToTop');
+        var hero = document.getElementById('hero');
 
-        btt.addEventListener('click', function (e) {
+        function checkBttVisibility() {
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            var heroHeight = hero ? hero.offsetHeight : 550;
+
+            // Show once scrolled past 75% of the hero section
+            if (scrollY > heroHeight * 0.75) {
+                if (floatingBtt) floatingBtt.classList.add('is-visible');
+            } else {
+                if (floatingBtt) floatingBtt.classList.remove('is-visible');
+            }
+        }
+
+        window.addEventListener('scroll', checkBttVisibility, { passive: true });
+        checkBttVisibility();
+
+        function scrollToTop(e) {
             e.preventDefault();
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        });
+        }
+
+        if (floatingBtt) floatingBtt.addEventListener('click', scrollToTop);
+        if (inlineBtt) inlineBtt.addEventListener('click', scrollToTop);
     }
 
     /**

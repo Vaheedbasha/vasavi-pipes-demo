@@ -60,11 +60,14 @@
                                 <span class="contact-label">Direct Contact Numbers</span>
                                 <div class="contact-phones">
                                     <a href="tel:+919948312666" class="contact-link contact-phone-primary">
-                                        <strong>Mobile / WhatsApp:</strong> +91 99483 12666
+                                        <span class="phone-label">Mobile / WhatsApp:</span>
+                                        <span class="phone-num">+91 99483 12666</span>
                                     </a>
-                                    <span class="contact-phone-sub">
-                                        <strong>Office:</strong> +91-08552-226846 &nbsp;|&nbsp; <strong>Factory:</strong> +91-08552-223623
-                                    </span>
+                                    <div class="contact-phone-sub">
+                                        <span class="landline-item"><strong>Office:</strong> +91-08552-226846</span>
+                                        <span class="landline-sep" aria-hidden="true">|</span>
+                                        <span class="landline-item"><strong>Factory:</strong> +91-08552-223623</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -30,6 +30,9 @@
     <!-- Font Awesome 6 Free Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp" fetchpriority="high">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -138,7 +141,7 @@
     <main id="mainContent">
         <!-- Section 02: Hero Section -->
         <section class="section section-hero hero-overlay-mode" id="hero">
-    <div class="hero-bg-layer" aria-hidden="true" style="background-image: linear-gradient(90deg, rgba(14, 18, 22, 0.92) 0%, rgba(14, 18, 22, 0.72) 50%, rgba(14, 18, 22, 0.38) 100%), url('assets/images/hero-bg.jpg'); background-size: cover; background-position: center right;">
+    <div class="hero-bg-layer" aria-hidden="true" style="background-image: linear-gradient(90deg, rgba(14, 18, 22, 0.92) 0%, rgba(14, 18, 22, 0.72) 50%, rgba(14, 18, 22, 0.38) 100%), url('assets/images/hero-bg.webp'); background-size: cover; background-position: center right;">
         <div class="hero-pattern-grid"></div>
     </div>
 
@@ -309,8 +312,11 @@
 
                     <div class="product-visual">
                         <div class="media-container aspect-4-3 product-media">
-                <img src="assets/images/products/upvc-pipes.jpg" alt="uPVC Water Pipes" class="media-photo" loading="lazy">
-            </div>                        <div class="product-badge-group">
+                    <picture>
+                        <source srcset="assets/images/products/upvc-pipes.webp" type="image/webp">
+                        <img src="assets/images/products/upvc-pipes.jpg" alt="uPVC Water Pipes" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <div class="product-badge-group">
                             <span class="product-badge">IS 4985 Standard</span>
                         </div>
                     </div>
@@ -358,8 +364,11 @@
 
                     <div class="product-visual">
                         <div class="media-container aspect-4-3 product-media">
-                <img src="assets/images/products/plumbing-pipes.jpg" alt="Plumbing Pipes &amp; Fittings" class="media-photo" loading="lazy">
-            </div>                        <div class="product-badge-group">
+                    <picture>
+                        <source srcset="assets/images/products/plumbing-pipes.webp" type="image/webp">
+                        <img src="assets/images/products/plumbing-pipes.jpg" alt="Plumbing Pipes &amp; Fittings" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <div class="product-badge-group">
                             <span class="product-badge">IS 4985 Standard</span>
                         </div>
                     </div>
@@ -407,8 +416,11 @@
 
                     <div class="product-visual">
                         <div class="media-container aspect-4-3 product-media">
-                <img src="assets/images/products/pvc-conduits.jpg" alt="Rigid PVC Electrical Conduits" class="media-photo" loading="lazy">
-            </div>                        <div class="product-badge-group">
+                    <picture>
+                        <source srcset="assets/images/products/pvc-conduits.webp" type="image/webp">
+                        <img src="assets/images/products/pvc-conduits.jpg" alt="Rigid PVC Electrical Conduits" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <div class="product-badge-group">
                             <span class="product-badge">IS 9537 Part-3</span>
                         </div>
                     </div>
@@ -456,8 +468,11 @@
 
                     <div class="product-visual">
                         <div class="media-container aspect-4-3 product-media">
-                <img src="assets/images/products/blue-threaded.jpg" alt="Blue Threaded Column Pipes" class="media-photo" loading="lazy">
-            </div>                        <div class="product-badge-group">
+                    <picture>
+                        <source srcset="assets/images/products/blue-threaded.webp" type="image/webp">
+                        <img src="assets/images/products/blue-threaded.jpg" alt="Blue Threaded Column Pipes" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <div class="product-badge-group">
                             <span class="product-badge">ASTM-D-1785 Standard</span>
                         </div>
                     </div>
@@ -505,8 +520,11 @@
 
                     <div class="product-visual">
                         <div class="media-container aspect-4-3 product-media">
-                <img src="assets/images/products/ivory-threaded.jpg" alt="Ivory Threaded Casing Pipes" class="media-photo" loading="lazy">
-            </div>                        <div class="product-badge-group">
+                    <picture>
+                        <source srcset="assets/images/products/ivory-threaded.webp" type="image/webp">
+                        <img src="assets/images/products/ivory-threaded.jpg" alt="Ivory Threaded Casing Pipes" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <div class="product-badge-group">
                             <span class="product-badge">ASTM-D-1785 Standard</span>
                         </div>
                     </div>
@@ -678,8 +696,11 @@
                             <div class="manufacturing-card interactive-mfg-card reveal-on-scroll">
                     <div class="mfg-visual">
                         <div class="media-container aspect-16-10 mfg-media">
-                <img src="assets/images/factory/mfg-step1-compounding.jpg" alt="Virgin Polymer Compounding" class="media-photo" loading="lazy">
-            </div>                        <span class="mfg-step-badge">STEP 01</span>
+                    <picture>
+                        <source srcset="assets/images/factory/mfg-step1-compounding.webp" type="image/webp">
+                        <img src="assets/images/factory/mfg-step1-compounding.jpg" alt="Virgin Polymer Compounding" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <span class="mfg-step-badge">STEP 01</span>
                     </div>
                     <div class="mfg-card-body">
                         <span class="mfg-category-label">MATERIAL PURITY</span>
@@ -690,8 +711,11 @@
                             <div class="manufacturing-card interactive-mfg-card reveal-on-scroll">
                     <div class="mfg-visual">
                         <div class="media-container aspect-16-10 mfg-media">
-                <img src="assets/images/factory/extrusion-line.jpg" alt="Twin-Screw Extrusion" class="media-photo" loading="lazy">
-            </div>                        <span class="mfg-step-badge">STEP 02</span>
+                    <picture>
+                        <source srcset="assets/images/factory/extrusion-line.webp" type="image/webp">
+                        <img src="assets/images/factory/extrusion-line.jpg" alt="Twin-Screw Extrusion" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <span class="mfg-step-badge">STEP 02</span>
                     </div>
                     <div class="mfg-card-body">
                         <span class="mfg-category-label">CONTROLLED EXTRUSION</span>
@@ -702,8 +726,11 @@
                             <div class="manufacturing-card interactive-mfg-card reveal-on-scroll">
                     <div class="mfg-visual">
                         <div class="media-container aspect-16-10 mfg-media">
-                <img src="assets/images/factory/mfg-step3-cooling.jpg" alt="Vacuum Calibration &amp; Cooling" class="media-photo" loading="lazy">
-            </div>                        <span class="mfg-step-badge">STEP 03</span>
+                    <picture>
+                        <source srcset="assets/images/factory/mfg-step3-cooling.webp" type="image/webp">
+                        <img src="assets/images/factory/mfg-step3-cooling.jpg" alt="Vacuum Calibration &amp; Cooling" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <span class="mfg-step-badge">STEP 03</span>
                     </div>
                     <div class="mfg-card-body">
                         <span class="mfg-category-label">CALIBRATED ROUNDNESS</span>
@@ -714,8 +741,11 @@
                             <div class="manufacturing-card interactive-mfg-card reveal-on-scroll">
                     <div class="mfg-visual">
                         <div class="media-container aspect-16-10 mfg-media">
-                <img src="assets/images/factory/mfg-step4-threading.jpg" alt="CNC Threading &amp; Inspection" class="media-photo" loading="lazy">
-            </div>                        <span class="mfg-step-badge">STEP 04</span>
+                    <picture>
+                        <source srcset="assets/images/factory/mfg-step4-threading.webp" type="image/webp">
+                        <img src="assets/images/factory/mfg-step4-threading.jpg" alt="CNC Threading &amp; Inspection" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                        <span class="mfg-step-badge">STEP 04</span>
                     </div>
                     <div class="mfg-card-body">
                         <span class="mfg-category-label">THREAD INTEGRITY</span>
@@ -805,8 +835,11 @@
             <div class="quality-visual reveal-on-scroll">
                 <div class="quality-card interactive-card">
                     <div class="media-container aspect-4-3 quality-media">
-                <img src="assets/images/factory/quality-lab.jpg" alt="Quality Inspection and Hydrostatic Testing at Guntakal Plant" class="media-photo" loading="lazy">
-            </div>                </div>
+                    <picture>
+                        <source srcset="assets/images/factory/quality-lab.webp" type="image/webp">
+                        <img src="assets/images/factory/quality-lab.jpg" alt="Quality Inspection and Hydrostatic Testing at Guntakal Plant" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>                </div>
 
                 <div class="quality-quick-metric interactive-hover-box">
                     <div class="metric-icon"><i class="fa-icon fa-solid fa-shield-halved" aria-hidden="true"></i></div>
@@ -900,11 +933,14 @@
                                 <span class="contact-label">Direct Contact Numbers</span>
                                 <div class="contact-phones">
                                     <a href="tel:+919948312666" class="contact-link contact-phone-primary">
-                                        <strong>Mobile / WhatsApp:</strong> +91 99483 12666
+                                        <span class="phone-label">Mobile / WhatsApp:</span>
+                                        <span class="phone-num">+91 99483 12666</span>
                                     </a>
-                                    <span class="contact-phone-sub">
-                                        <strong>Office:</strong> +91-08552-226846 &nbsp;|&nbsp; <strong>Factory:</strong> +91-08552-223623
-                                    </span>
+                                    <div class="contact-phone-sub">
+                                        <span class="landline-item"><strong>Office:</strong> +91-08552-226846</span>
+                                        <span class="landline-sep" aria-hidden="true">|</span>
+                                        <span class="landline-item"><strong>Factory:</strong> +91-08552-223623</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1094,8 +1130,17 @@
     </div>
 </footer>
 
-<!-- Floating WhatsApp Action Button (Fixed Bottom-Right) -->
-<aside class="floating-whatsapp-wrap" aria-label="Direct WhatsApp Contact">
+<!-- Floating Action Buttons (Fixed Bottom-Right Stack) -->
+<aside class="floating-actions-stack" aria-label="Quick Navigation and Contact Actions">
+    <!-- Floating Back to Top Button (Triggered when scrolled past hero) -->
+    <button type="button" 
+            class="floating-btt-btn" 
+            id="floatingBackToTopBtn" 
+            aria-label="Scroll back to top of page" 
+            title="Back to top">
+        <i class="fa-icon fa-solid fa-arrow-up btt-floating-icon" aria-hidden="true"></i>    </button>
+
+    <!-- Floating WhatsApp Action Button -->
     <a href="https://wa.me/919948312666?text=Hi+Vasavi+Pipes%2C+I+would+like+to+get+a+product+price+quotation+and+dealership+details." 
        target="_blank" 
        rel="noopener noreferrer" 

@@ -92,8 +92,18 @@
     </div>
 </footer>
 
-<!-- Floating WhatsApp Action Button (Fixed Bottom-Right) -->
-<aside class="floating-whatsapp-wrap" aria-label="Direct WhatsApp Contact">
+<!-- Floating Action Buttons (Fixed Bottom-Right Stack) -->
+<aside class="floating-actions-stack" aria-label="Quick Navigation and Contact Actions">
+    <!-- Floating Back to Top Button (Triggered when scrolled past hero) -->
+    <button type="button" 
+            class="floating-btt-btn" 
+            id="floatingBackToTopBtn" 
+            aria-label="Scroll back to top of page" 
+            title="Back to top">
+        <?= get_icon('arrow-up', 'btt-floating-icon') ?>
+    </button>
+
+    <!-- Floating WhatsApp Action Button -->
     <a href="https://wa.me/919948312666?text=<?= urlencode('Hi Vasavi Pipes, I would like to get a product price quotation and dealership details.') ?>" 
        target="_blank" 
        rel="noopener noreferrer" 

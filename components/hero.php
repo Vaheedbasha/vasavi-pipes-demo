@@ -3,7 +3,7 @@
  * Hero Section Component (Clean Overlay Hero, Uncluttered Background)
  * vasavi-pipes / components/hero.php
  */
-$hero_bg_image = 'assets/images/hero-bg.jpg';
+$hero_bg_image = file_exists(__DIR__ . '/../assets/images/hero-bg.webp') ? 'assets/images/hero-bg.webp' : 'assets/images/hero-bg.jpg';
 ?>
 <section class="section section-hero hero-overlay-mode" id="hero">
     <div class="hero-bg-layer" aria-hidden="true" style="background-image: linear-gradient(90deg, rgba(14, 18, 22, 0.92) 0%, rgba(14, 18, 22, 0.72) 50%, rgba(14, 18, 22, 0.38) 100%), url('<?= htmlspecialchars($hero_bg_image) ?>'); background-size: cover; background-position: center right;">

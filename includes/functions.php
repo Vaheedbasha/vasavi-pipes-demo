@@ -77,9 +77,28 @@ function render_placeholder($label, $aspect_class = 'aspect-16-9', $extra_class 
 function render_media($path, $alt, $aspect_class = 'aspect-4-3', $placeholder_label = '', $extra_class = '') {
     $full_path = __DIR__ . '/../' . ltrim($path, '/');
     if (!empty($path) && file_exists($full_path)) {
+        $webp_path = preg_replace('/\.(jpg|jpeg|png)$/i', '.webp', $path);
+        $full_webp = __DIR__ . '/../' . ltrim($webp_path, '/');
+
+        if (file_exists($full_webp)) {
+            return sprintf(
+                '<div class="media-container %s %s">
+                    <picture>
+                        <source srcset="%s" type="image/webp">
+                        <img src="%s" alt="%s" class="media-photo" loading="lazy" decoding="async">
+                    </picture>
+                </div>',
+                htmlspecialchars($aspect_class),
+                htmlspecialchars($extra_class),
+                htmlspecialchars($webp_path),
+                htmlspecialchars($path),
+                htmlspecialchars($alt)
+            );
+        }
+
         return sprintf(
             '<div class="media-container %s %s">
-                <img src="%s" alt="%s" class="media-photo" loading="lazy">
+                <img src="%s" alt="%s" class="media-photo" loading="lazy" decoding="async">
             </div>',
             htmlspecialchars($aspect_class),
             htmlspecialchars($extra_class),
