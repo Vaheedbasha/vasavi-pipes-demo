@@ -8,15 +8,15 @@
     <div class="container">
         <div class="footer-top">
             <div class="footer-brand-col">
-                <a href="#hero" class="footer-brand-link" aria-label="Vasavi Plast Industries - Back to top">
+                <a href="#hero" class="footer-brand-link" aria-label="Vasavi Pipes Private Limited - Back to top">
                     <?= render_brand_logo(true) ?>
                 </a>
                 <p class="footer-tagline">
-                    High-strength PVC pipes and fittings manufactured with 100% virgin polymer compounding at our Guntakal facility, Andhra Pradesh.
+                    Vasavi Pipes Private Limited manufactures precision uPVC, conduit, and threaded borewell pipes with virgin polymer compounding at Guntakal, Andhra Pradesh.
                 </p>
                 <div class="footer-badge-pill">
                     <span class="badge-dot"></span>
-                    <span>BIS &amp; ASTM Certified Manufacturer · Guntakal, AP</span>
+                    <span>CIN: U45200AP2006PTC049993 · Inception 2006 · Guntakal, AP</span>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <h4 class="footer-heading">Plant &amp; Office</h4>
                 <div class="footer-contact-items">
                     <div class="footer-contact-item">
-                        <?= get_icon('map-pin', 'footer-item-icon') ?>
+                        <?= get_icon('factory', 'footer-item-icon') ?>
                         <span>Plot No. E-2, IDA, Gooty Road, Guntakal, AP - 515801</span>
                     </div>
                     <div class="footer-contact-item">
@@ -81,7 +81,7 @@
                     &copy; <?= date('Y') ?> <?= htmlspecialchars(SITE_NAME) ?>. All rights reserved.
                 </p>
                 <div class="footer-bottom-standards">
-                    <span>IS 4985:2000</span> &bull; <span>IS 9537 Part-3</span> &bull; <span>ASTM-D-1785</span>
+                    <span>IS 4985</span> &bull; <span>IS 9537 Part-3</span> &bull; <span>ASTM-D-1785</span>
                 </div>
                 <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top of page">
                     <span>Back to Top</span>

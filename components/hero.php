@@ -14,7 +14,7 @@ $hero_bg_image = 'assets/images/hero-bg.jpg';
         <div class="hero-content-wrap reveal-on-scroll">
             <div class="hero-meta-pill">
                 <span class="hero-pill-dot"></span>
-                <span class="eyebrow eyebrow-light">BIS &amp; ASTM CERTIFIED</span>
+                <span class="eyebrow eyebrow-light">INCORPORATED 2006</span>
                 <span class="meta-divider" aria-hidden="true">·</span>
                 <span class="location-badge-light">
                     <?= get_icon('map-pin', 'location-icon') ?>
@@ -23,17 +23,20 @@ $hero_bg_image = 'assets/images/hero-bg.jpg';
             </div>
 
             <h1 class="hero-title hero-title-overlay">
-                Piping Solutions Built for Tough Conditions.
+                Piping Solutions Engineered for Enduring Performance.
             </h1>
 
             <p class="hero-description hero-desc-overlay">
-                Vasavi Plast Industries manufactures high-grade uPVC water pipes, electrical conduits, and borewell column pipes in Guntakal, Andhra Pradesh. Built with virgin polymers for leak-free, long-lasting performance.
+                Vasavi Pipes Private Limited manufactures precision uPVC water pipes, rigid electrical conduits, and threaded borewell pipes in Guntakal, Andhra Pradesh. Extruded with virgin polymer formulations for agricultural, plumbing, and industrial infrastructure.
             </p>
 
             <div class="hero-actions">
                 <a href="#products" class="btn btn-primary btn-lg hero-btn-primary">
                     <span>Explore Products</span>
                     <?= get_icon('arrow-right', 'btn-icon-right') ?>
+                </a>
+                <a href="#about" class="btn btn-outline-light btn-lg">
+                    <span>About Company</span>
                 </a>
             </div>
         </div>

@@ -27,6 +27,18 @@ html, body {
         --container-max: 1360px;
     }
 
+    .brand-logo-img {
+        height: 64px;
+    }
+
+    .brand-name-text {
+        font-size: 1.75rem;
+    }
+
+    .brand-sub-text {
+        font-size: 0.74rem;
+    }
+
     .hero-title-overlay {
         font-size: 4.25rem;
     }
@@ -65,6 +77,18 @@ html, body {
         padding-right: var(--space-xl);
     }
 
+    .brand-logo-img {
+        height: 50px;
+    }
+
+    .brand-name-text {
+        font-size: 1.45rem;
+    }
+
+    .brand-sub-text {
+        font-size: 0.62rem;
+    }
+
     .section {
         padding-top: clamp(3rem, 6vw, 4.5rem);
         padding-bottom: clamp(3rem, 6vw, 4.5rem);
@@ -81,20 +105,16 @@ html, body {
         line-height: 1.15;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
+    .about-editorial {
+        max-width: 100%;
     }
 
-    .about-visual {
-        max-width: 620px;
-        margin: 0 auto;
-        width: 100%;
+    .about-facts-grid {
+        gap: 1.25rem;
     }
 
-    .about-highlights-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .leadership-columns {
+        gap: 1.25rem;
     }
 
     .quality-grid {
@@ -200,7 +220,7 @@ html, body {
     }
 
     .brand-logo-img {
-        height: 38px;
+        height: 42px;
         width: auto;
     }
 
@@ -209,11 +229,11 @@ html, body {
     }
 
     .brand-name-text {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
 
     .brand-sub-text {
-        font-size: 0.55rem;
+        font-size: 0.58rem;
     }
 
     .mobile-nav-toggle {
@@ -431,137 +451,80 @@ html, body {
         min-height: 48px;
     }
 
-    /* About Section (Fixed Mobile Visual Badge Layout) */
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .about-visual {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .about-visual-card {
-        position: relative;
-        border-radius: 18px;
-        overflow: hidden;
-        margin-bottom: 0;
-        background-color: #171B1F;
-        border: 1px solid var(--color-border);
-        box-shadow: var(--shadow-card);
-    }
-
-    .about-visual-card .media-photo {
-        width: 100%;
-        display: block;
-    }
-
-    .about-card-badge-floating {
-        position: absolute;
-        bottom: 12px;
-        left: 12px;
-        right: 12px;
-        width: auto;
-        margin-top: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border-radius: 14px;
-        padding: 0.75rem 1rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        display: flex;
-        align-items: center;
-        gap: 0.85rem;
-        z-index: 5;
-    }
-
-    .about-card-badge-floating .badge-icon {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        font-size: 1.05rem;
-        border-radius: 10px;
-    }
-
-    .about-card-badge-floating .badge-text strong {
-        font-size: 0.84rem;
-        line-height: 1.25;
-    }
-
-    .about-card-badge-floating .badge-text span {
-        font-size: 0.7rem;
-        line-height: 1.2;
-    }
-
-    .about-body .lead-text {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        margin-bottom: 0.85rem;
-    }
-
-    .about-body .secondary-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
+    /* About Section (Minimal Editorial Mobile Layout) */
+    .about-header-block {
         margin-bottom: 1.5rem;
     }
 
-    .about-highlights-grid {
+    .about-editorial-title {
+        font-size: clamp(1.65rem, 6vw, 2.15rem);
+        line-height: 1.22;
+        margin-bottom: 1rem;
+    }
+
+    .about-editorial-lead {
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    .about-accent-divider {
+        margin: 1.75rem 0 2rem 0;
+    }
+
+    .about-facts-grid {
         grid-template-columns: 1fr;
-        gap: 0.85rem;
-        margin-bottom: 1.75rem;
+        gap: 1.25rem;
+        padding: 1.5rem 0;
     }
 
-    .highlight-item {
-        padding: 1rem 1.15rem;
-        border-radius: 14px;
+    .about-fact-card {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--color-border);
     }
 
-    .about-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        width: 100%;
+    .about-fact-card:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
     }
 
-    .about-actions .btn {
-        width: 100%;
-        min-height: 48px;
+    .about-fact-value {
+        font-size: 1.5rem;
     }
 
-    /* Product Section (Horizontal Scrollable Tabs & Clean Cards) */
+    .about-leadership-wrap {
+        margin-top: 2rem;
+    }
+
+    .leadership-columns {
+        grid-template-columns: 1fr;
+        gap: 1.15rem;
+    }
+
+    .leadership-item {
+        border-left: 2px solid var(--color-brand-accent);
+        padding-left: 1rem;
+    }
+
+    .leader-name {
+        font-size: 1.02rem;
+    }
+
+    .leader-role {
+        font-size: 0.82rem;
+    }
+
+    /* Product Section Dual Viewport Filter Switch (< 640px) */
     .product-filter-wrap {
         width: 100%;
-        overflow: hidden;
         margin-bottom: 1.75rem;
     }
 
-    .product-filter-tabs {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        width: 100%;
-        max-width: 100%;
-        padding: 0.35rem;
-        gap: 0.45rem;
-        border-radius: 9999px;
-        justify-content: flex-start;
+    .desktop-filter-tabs {
+        display: none !important;
     }
 
-    .product-filter-tabs::-webkit-scrollbar {
-        display: none;
-    }
-
-    .filter-tab-btn {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        padding: 0.6rem 1.1rem;
-        font-size: 0.82rem;
-        border-radius: 9999px;
-        min-height: 40px;
+    .mobile-filter-container {
+        display: flex !important;
     }
 
     .products-grid {
@@ -910,17 +873,97 @@ html, body {
         gap: 0.5rem;
     }
 
-    .about-card-badge-floating {
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-        padding: 0.65rem 0.75rem;
+    .about-fact-value {
+        font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   7. Dual Viewport Product Category Filter Architecture (640px Boundary)
+   ========================================================================== */
+@media (min-width: 640px) {
+    .desktop-filter-tabs {
+        display: inline-flex !important;
+    }
+    .mobile-filter-container {
+        display: none !important;
+    }
+}
+
+@media (max-width: 639px) {
+    .desktop-filter-tabs {
+        display: none !important;
+    }
+    .mobile-filter-container {
+        display: flex !important;
     }
 
-    .about-card-badge-floating .badge-icon {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-        font-size: 0.95rem;
+    /* Modal Mobile Reflow (Ultra-Compact, Zero Scrollbar) */
+    .modal-dialog-wrap {
+        overflow: hidden;
+        padding: 0.5rem;
+    }
+
+    .modal-container {
+        padding: 1.1rem 1rem;
+        border-radius: 14px;
+        max-height: none;
+        overflow: visible;
+        max-width: 96vw;
+    }
+
+    .modal-header {
+        padding-right: 1.75rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .modal-title {
+        font-size: 1.15rem;
+        line-height: 1.2;
+    }
+
+    .form-row {
+        gap: 0.45rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+    }
+
+    .form-group-requirement {
+        margin-bottom: 0.45rem;
+    }
+
+    .form-input,
+    .form-select {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.82rem;
+    }
+
+    .modal-actions-grid {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+        margin-top: 0.45rem;
+    }
+
+    .modal-actions-grid .btn {
+        min-height: 36px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .modal-footer-note {
+        margin-top: 0.45rem;
+        font-size: 0.66rem;
+    }
+
+    .modal-close-btn {
+        top: 0.65rem;
+        right: 0.65rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.78rem;
     }
 }

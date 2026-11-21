@@ -6,7 +6,7 @@
 ?>
 <header class="site-header" id="siteHeader">
     <div class="header-container container">
-        <a href="#hero" class="brand-link" aria-label="Vasavi Plast Industries - Home">
+        <a href="#hero" class="brand-link" aria-label="Vasavi Pipes Private Limited - Home">
             <?= render_brand_logo(false) ?>
         </a>
 
@@ -15,10 +15,10 @@
         </div>
 
         <div class="header-actions">
-            <a href="#contact" class="btn btn-primary btn-sm header-cta">
+            <button type="button" class="btn btn-primary btn-sm header-cta" data-open-modal="enquiryModal" data-product="Dealership & Wholesale Supply">
                 <span>Dealer Enquiries</span>
                 <?= get_icon('arrow-right', 'btn-icon-right') ?>
-            </a>
+            </button>
             <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-controls="mobileNavDrawer" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="icon-open"><?= get_icon('menu') ?></span>
                 <span class="icon-close"><?= get_icon('x') ?></span>
@@ -48,10 +48,10 @@
                 <?php endforeach; ?>
             </ul>
             <div class="mobile-nav-footer">
-                <a href="#contact" class="btn btn-primary btn-block">
+                <button type="button" class="btn btn-primary btn-block" data-open-modal="enquiryModal" data-product="Dealership & Wholesale Supply">
                     <span>Dealer Enquiries</span>
                     <?= get_icon('arrow-right', 'btn-icon-right') ?>
-                </a>
+                </button>
             </div>
         </div>
     </div>

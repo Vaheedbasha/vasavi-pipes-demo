@@ -10,15 +10,15 @@
             <div class="enquiry-card-glow" aria-hidden="true"></div>
             <div class="enquiry-card-content">
                 <span class="enquiry-eyebrow">DIRECT FACTORY SUPPLY &amp; DEALERSHIP</span>
-                <h2 class="enquiry-title">Ready for Reliable PVC Pipes at Factory Prices?</h2>
+                <h2 class="enquiry-title">Ready for Reliable PVC Pipes at Factory Direct Terms?</h2>
                 <p class="enquiry-description">
-                    Connect directly with Vasavi Plast Industries for wholesale price lists, dealership terms, and fast consignment dispatches from Guntakal.
+                    Connect directly with Vasavi Pipes Private Limited for product specifications, wholesale price lists, dealership terms, and prompt consignment dispatches from Guntakal.
                 </p>
                 <div class="enquiry-actions">
-                    <a href="#contact" class="btn btn-primary btn-lg cta-main-btn">
+                    <button type="button" class="btn btn-primary btn-lg cta-main-btn" data-open-modal="enquiryModal" data-product="Dealership & Wholesale Supply">
                         <span>Request Wholesale Price List</span>
                         <?= get_icon('arrow-right', 'btn-icon-right') ?>
-                    </a>
+                    </button>
                     <a href="<?= htmlspecialchars($company_info['phone_tel']) ?>" class="btn btn-secondary-dark btn-lg cta-phone-btn">
                         <?= get_icon('phone', 'btn-icon-left') ?>
                         <span>Call: <?= htmlspecialchars($company_info['phone_display']) ?></span>

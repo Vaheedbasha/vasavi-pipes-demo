@@ -1,6 +1,6 @@
 <?php
 /**
- * Product Portfolio Component (Interactive Category Filtering & Spec Cards)
+ * Product Portfolio Component (Segmented Desktop Pills & Native Mobile Select Dropdown)
  * vasavi-pipes / components/products.php
  */
 ?>
@@ -14,19 +14,40 @@
             </p>
         </div>
 
-        <!-- Interactive Category Filter Tabs -->
+        <!-- Product Category Filters (Dual Viewport Architecture) -->
         <div class="product-filter-wrap text-center reveal-on-scroll">
-            <div class="product-filter-tabs" role="tablist" aria-label="Product Categories">
+            
+            <!-- Desktop Segmented Tabs (Visible on >= 640px) -->
+            <div class="product-filter-tabs desktop-filter-tabs" role="tablist" aria-label="Product Categories">
                 <?php foreach ($product_filters as $i => $filter): ?>
                     <button type="button" 
                             class="filter-tab-btn <?= $i === 0 ? 'active' : '' ?>" 
                             data-filter="<?= htmlspecialchars($filter['id']) ?>"
                             role="tab"
+                            id="tab-<?= htmlspecialchars($filter['id']) ?>"
                             aria-selected="<?= $i === 0 ? 'true' : 'false' ?>">
                         <span><?= htmlspecialchars($filter['name']) ?></span>
                     </button>
                 <?php endforeach; ?>
             </div>
+
+            <!-- Mobile Native Select Dropdown (Visible on < 640px) -->
+            <div class="mobile-filter-container">
+                <label for="mobileProductFilter" class="mobile-filter-label">Product Category</label>
+                <div class="mobile-select-custom-wrapper">
+                    <select id="mobileProductFilter" class="mobile-product-select" aria-label="Product Category">
+                        <?php foreach ($product_filters as $filter): ?>
+                            <option value="<?= htmlspecialchars($filter['id']) ?>">
+                                <?= htmlspecialchars($filter['name']) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <span class="mobile-select-arrow" aria-hidden="true">
+                        <?= get_icon('chevron-down') ?>
+                    </span>
+                </div>
+            </div>
+
         </div>
 
         <!-- Products Grid -->
@@ -36,6 +57,8 @@
                          data-category="<?= htmlspecialchars($prod['filter_group']) ?>"
                          id="product-<?= htmlspecialchars($prod['id']) ?>">
                     
+                    <div class="product-top-accent"></div>
+
                     <div class="product-visual">
                         <?= render_media($prod['image'], $prod['name'], 'aspect-4-3', $prod['placeholder_label'], 'product-media') ?>
                         <div class="product-badge-group">
@@ -51,47 +74,51 @@
                         
                         <h3 class="product-name"><?= htmlspecialchars($prod['name']) ?></h3>
                         <p class="product-summary"><?= htmlspecialchars($prod['summary']) ?></p>
-                        <p class="product-description"><?= htmlspecialchars($prod['desc']) ?></p>
 
-                        <?php if (!empty($prod['specs']) && is_array($prod['specs'])): ?>
-                            <div class="product-specs-grid">
-                                <?php foreach ($prod['specs'] as $specKey => $specVal): ?>
-                                    <div class="spec-cell">
-                                        <span class="spec-label"><?= htmlspecialchars($specKey) ?></span>
-                                        <strong class="spec-val"><?= htmlspecialchars($specVal) ?></strong>
-                                    </div>
-                                <?php endforeach; ?>
+                        <?php if (!empty($prod['applications']) && is_array($prod['applications'])): ?>
+                            <div class="product-applications-group">
+                                <span class="app-group-label">Verified Applications:</span>
+                                <div class="app-chip-list">
+                                    <?php foreach ($prod['applications'] as $app): ?>
+                                        <span class="app-chip">
+                                            <?= get_icon('check', 'app-chip-icon') ?>
+                                            <span><?= htmlspecialchars($app) ?></span>
+                                        </span>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         <?php endif; ?>
 
                         <div class="product-card-footer">
-                            <a href="#contact" 
-                               class="btn btn-primary btn-sm btn-block btn-product-enquire"
-                               aria-label="Enquire about <?= htmlspecialchars($prod['name']) ?>">
-                                <span>Enquire for Pricing</span>
+                            <button type="button" 
+                                    class="btn btn-primary btn-block btn-product-enquire"
+                                    data-open-modal="enquiryModal"
+                                    data-product="<?= htmlspecialchars($prod['name']) ?>"
+                                    aria-label="Enquire about <?= htmlspecialchars($prod['name']) ?>">
+                                <span>Enquire About This Product</span>
                                 <?= get_icon('arrow-right', 'btn-icon-right') ?>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </article>
             <?php endforeach; ?>
         </div>
 
-        <!-- Dealership & Wholesale Banner -->
+        <!-- Dealership & Wholesale Supply Banner -->
         <div class="products-cta-wrap reveal-on-scroll">
             <div class="products-cta-box interactive-banner">
                 <div class="cta-box-text">
                     <span class="cta-eyebrow">WHOLESALE &amp; DEALERSHIP SUPPLY</span>
                     <h3 class="cta-box-title">Become an Authorized Vasavi Pipes Dealer</h3>
                     <p class="cta-box-desc">
-                        Direct factory supply, prompt consignment dispatch from Guntakal junction, and competitive wholesale pricing for hardware merchants and contractors.
+                        Direct factory supply, prompt consignment dispatch from Guntakal junction, and competitive wholesale pricing for regional hardware merchants and contractors.
                     </p>
                 </div>
                 <div class="cta-box-actions">
-                    <a href="#contact" class="btn btn-primary btn-lg cta-box-btn">
+                    <button type="button" class="btn btn-primary btn-lg cta-box-btn" data-open-modal="enquiryModal" data-product="Dealership & Wholesale Supply">
                         <span>Apply for Dealership</span>
                         <?= get_icon('arrow-right', 'btn-icon-right') ?>
-                    </a>
+                    </button>
                     <a href="<?= htmlspecialchars($company_info['phone_tel']) ?>" class="btn btn-outline-light btn-lg">
                         <?= get_icon('phone', 'btn-icon-left') ?>
                         <span>Call Factory Office</span>

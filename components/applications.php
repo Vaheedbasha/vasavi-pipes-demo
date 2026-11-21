@@ -10,7 +10,7 @@
             <span class="section-label">APPLICATION SECTORS</span>
             <h2 class="section-title">Engineered for Every Critical Sector</h2>
             <p class="section-subtitle">
-                From deep agricultural borewells to multi-story buildings and electrical safety systems.
+                From deep agricultural borewells to high-rise building plumbing and concealed electrical safety systems.
             </p>
         </div>
 
@@ -30,7 +30,7 @@
                     <div class="app-card-foot">
                         <span class="app-feature-badge">
                             <?= get_icon('check-circle', 'badge-check') ?>
-                            <?= htmlspecialchars(isset($app['metric']) ? $app['metric'] : (isset($app['feature']) ? $app['feature'] : 'Heavy Duty Quality')) ?>
+                            <?= htmlspecialchars(isset($app['metric']) ? $app['metric'] : (isset($app['feature']) ? $app['feature'] : 'Standard Quality')) ?>
                         </span>
                     </div>
                 </div>
@@ -43,13 +43,13 @@
                     <?= get_icon('shield-check', 'notice-icon') ?>
                 </div>
                 <div class="notice-text-content">
-                    <h4 class="notice-title">Contractor &amp; Project Assistance</h4>
+                    <h4 class="notice-title">Contractor &amp; Project Supply Assistance</h4>
                     <p class="notice-text">
-                        Need help selecting the correct pressure class (2.5, 4, or 6 Kgf/cm²) or conduit schedule? Contact our Guntakal technical desk for dimension charts and batch test reports.
+                        Planning an agricultural irrigation line, commercial plumbing layout, or electrical conduit installation? Contact our Guntakal plant desk for consignment schedules and technical guidance.
                     </p>
                 </div>
                 <a href="#contact" class="btn btn-primary btn-sm notice-action-btn">
-                    <span>Ask Technical Team</span>
+                    <span>Contact Plant Desk</span>
                     <?= get_icon('arrow-right', 'btn-icon-right') ?>
                 </a>
             </div>

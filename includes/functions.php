@@ -1,6 +1,6 @@
 <?php
 /**
- * Vasavi Plast Industries - Helper Functions
+ * Vasavi Pipes Private Limited - Helper Functions
  */
 
 /**
@@ -24,11 +24,16 @@ function get_icon($name, $class = '') {
         'zap' => 'fa-solid fa-bolt',
         'building-2' => 'fa-solid fa-building',
         'clock' => 'fa-solid fa-clock',
+        'check' => 'fa-solid fa-check',
         'check-circle' => 'fa-solid fa-circle-check',
         'tool' => 'fa-solid fa-gears',
         'gears' => 'fa-solid fa-gears',
         'gauge' => 'fa-solid fa-gauge-high',
         'wrench' => 'fa-solid fa-wrench',
+        'chevron-down' => 'fa-solid fa-chevron-down',
+        'info-circle' => 'fa-solid fa-circle-info',
+        'instagram' => 'fa-brands fa-instagram',
+        'linkedin' => 'fa-brands fa-linkedin-in',
         'whatsapp' => 'fa-brands fa-whatsapp',
     ];
 
@@ -100,29 +105,30 @@ function render_whatsapp_icon($class = 'whatsapp-official-icon') {
  * Render Company Brand Identity (Official logo image if exists, else framed corporate mark)
  */
 function render_brand_logo($is_footer = false) {
-    $logo_file = $is_footer ? 'assets/images/logo/logo-dark.png' : 'assets/images/logo/logo.png';
-    $full_path = __DIR__ . '/../' . $logo_file;
-
-    if (file_exists($full_path)) {
-        return sprintf(
-            '<img src="%s" alt="Vasavi Plast Industries - PVC Pipes &amp; Fittings" class="brand-logo-img%s" height="46">',
-            htmlspecialchars($logo_file),
-            $is_footer ? ' brand-logo-footer' : ''
-        );
+    if ($is_footer) {
+        $logo_file = 'assets/images/logo/logo-dark.png';
+    } else {
+        $logo_file = file_exists(__DIR__ . '/../assets/images/logo/logo.png') 
+            ? 'assets/images/logo/logo.png' 
+            : (file_exists(__DIR__ . '/../assets/images/logo/logo.jpg') ? 'assets/images/logo/logo.jpg' : '');
     }
 
-    $fallback_file = __DIR__ . '/../assets/images/logo/logo.png';
-    if (file_exists($fallback_file)) {
+    $full_path = !empty($logo_file) ? __DIR__ . '/../' . $logo_file : '';
+
+    if (!empty($full_path) && file_exists($full_path)) {
+        $height = $is_footer ? '52' : '58';
         return sprintf(
-            '<img src="assets/images/logo/logo.png" alt="Vasavi Plast Industries - PVC Pipes &amp; Fittings" class="brand-logo-img%s" height="46">',
-            $is_footer ? ' brand-logo-footer' : ''
+            '<img src="%s" alt="Vasavi Pipes - PVC Pipes &amp; Fittings" class="brand-logo-img%s" height="%s">',
+            htmlspecialchars($logo_file),
+            $is_footer ? ' brand-logo-footer' : '',
+            $height
         );
     }
 
     // Fallback CSS framed mark matching spec
     $modifier = $is_footer ? ' brand-framed-dark' : ' brand-framed-light';
     return sprintf(
-        '<div class="brand-framed%s" aria-label="Vasavi Plast Industries - PVC Pipes and Fittings">
+        '<div class="brand-framed%s" aria-label="Vasavi Pipes - PVC Pipes and Fittings">
             <div class="brand-frame-box">
                 <span class="brand-name-text">VASAVI</span>
                 <span class="brand-sub-text">PVC PIPES &amp; FITTINGS</span>

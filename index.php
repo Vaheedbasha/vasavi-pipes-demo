@@ -1,6 +1,6 @@
 <?php
 /**
- * Vasavi Plast Industries - Official Homepage Redesign Concept
+ * Vasavi Pipes Private Limited - Official Website
  * Single-Page Corporate Industrial Website
  */
 
@@ -17,8 +17,8 @@ require_once __DIR__ . '/includes/functions.php';
     <!-- SEO Meta Tags -->
     <title><?= htmlspecialchars(SITE_TITLE) ?></title>
     <meta name="description" content="<?= htmlspecialchars(SITE_DESCRIPTION) ?>">
-    <meta name="keywords" content="Vasavi Plast Industries, PVC pipes, uPVC pipes, plumbing pipes, PVC conduits, threaded pipes, Guntakal, Andhra Pradesh, PVC pipe manufacturer">
-    <meta name="author" content="Vasavi Plast Industries">
+    <meta name="keywords" content="Vasavi Pipes Private Limited, Vasavi Pipes, PVC pipes, uPVC pipes, plumbing pipes, PVC conduits, borewell column pipes, casing pipes, Guntakal, Andhra Pradesh, PVC pipe manufacturer">
+    <meta name="author" content="Vasavi Pipes Private Limited">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Social Meta -->
@@ -76,6 +76,9 @@ require_once __DIR__ . '/includes/functions.php';
 
     <!-- Section 10: Footer -->
     <?php include __DIR__ . '/components/footer.php'; ?>
+
+    <!-- Modal Dialog: Direct Factory RFQ & Enquiry -->
+    <?php include __DIR__ . '/components/enquiry-modal.php'; ?>
 
     <!-- Core JavaScript -->
     <script src="assets/js/main.js"></script>

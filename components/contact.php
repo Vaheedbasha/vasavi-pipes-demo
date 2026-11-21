@@ -1,6 +1,6 @@
 <?php
 /**
- * Contact Section Component (Verified Factory Details & Logistics Hub)
+ * Contact Section Component (Verified Plant Details & Corporate Offices)
  * vasavi-pipes / components/contact.php
  */
 ?>
@@ -10,31 +10,45 @@
             <span class="section-label">CONTACT US</span>
             <h2 class="section-title">Get in Touch with Our Plant Office</h2>
             <p class="section-subtitle">
-                Visit our factory in Guntakal or connect directly via phone or email for price lists and dealership inquiries.
+                Visit our manufacturing facility in Guntakal or connect directly via phone or email for price lists, technical specifications, and dealership inquiries.
             </p>
         </div>
 
         <div class="contact-grid">
+            <!-- Left Column: Contact Channels & Corporate Addresses -->
             <div class="contact-info-col reveal-on-scroll">
                 <div class="contact-info-card interactive-card">
                     <div class="company-badge-header">
                         <?= render_brand_logo(false) ?>
                         <div class="company-sub-badge">
                             <span class="status-dot"></span>
-                            <span>Manufacturing Plant &amp; Head Office</span>
+                            <span>Vasavi Pipes Private Limited</span>
                         </div>
                     </div>
 
                     <div class="contact-channels">
                         <div class="contact-item interactive-contact-item">
                             <div class="contact-icon">
-                                <?= get_icon('map-pin') ?>
+                                <?= get_icon('factory') ?>
                             </div>
                             <div class="contact-details">
-                                <span class="contact-label">Plant &amp; Registered Office Address</span>
+                                <span class="contact-label">Manufacturing Plant &amp; Works</span>
                                 <p class="contact-value">
-                                    Plot No. E-2, Industrial Development Area, Gooty Road, Guntakal, Dist. Anantapur, Andhra Pradesh - 515801, India
+                                    Plot No. E-2, Industrial Development Area (IDA), Gooty Road, Guntakal, Dist. Anantapur, Andhra Pradesh - 515801, India
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item interactive-contact-item">
+                            <div class="contact-icon">
+                                <?= get_icon('building-2') ?>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Registered Corporate Office (ROC)</span>
+                                <p class="contact-value">
+                                    D.No. 15-140, Ramaswamy Temple Street, Guntakal, Anantapur Dist., Andhra Pradesh - 515801, India
+                                </p>
+                                <span class="contact-subtext">CIN: U45200AP2006PTC049993 · Inception: 2006</span>
                             </div>
                         </div>
 
@@ -64,7 +78,7 @@
                                 <a href="mailto:vasavipipes@gmail.com" class="contact-link">
                                     vasavipipes@gmail.com
                                 </a>
-                                <span class="contact-subtext">Send RFQs, bulk orders, and dealership enquiries</span>
+                                <span class="contact-subtext">Send RFQs, project orders, and dealership enquiries</span>
                             </div>
                         </div>
 
@@ -73,28 +87,31 @@
                                 <?= get_icon('clock') ?>
                             </div>
                             <div class="contact-details">
-                                <span class="contact-label">Working Hours</span>
+                                <span class="contact-label">Business &amp; Dispatch Hours</span>
                                 <span class="contact-value">Monday – Saturday: 9:00 AM – 6:30 PM IST</span>
-                                <span class="contact-subtext">Dispatches operate on all working business days</span>
+                                <span class="contact-subtext">Freight dispatches operate on all working business days</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="contact-card-footer">
-                        <a href="mailto:vasavipipes@gmail.com?subject=Wholesale%20Product%20Enquiry%20-%20Vasavi%20Plast" 
-                           class="btn btn-primary btn-block">
+                        <button type="button" 
+                                class="btn btn-primary btn-block"
+                                data-open-modal="enquiryModal"
+                                data-product="All Products / General Enquiry">
                             <?= get_icon('mail', 'btn-icon-left') ?>
-                            <span>Send Factory Email Enquiry</span>
-                        </a>
+                            <span>Request Official Quote &amp; Price List</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
+            <!-- Right Column: Central Junction Map -->
             <div class="contact-map-col reveal-on-scroll">
                 <div class="map-card interactive-card">
                     <div class="map-header">
                         <div class="map-title-wrap">
-                            <span class="map-tag">CENTRAL FREIGHT JUNCTION</span>
+                            <span class="map-tag">SOUTH CENTRAL FREIGHT JUNCTION</span>
                             <h3 class="map-heading">Guntakal, Andhra Pradesh</h3>
                         </div>
                         <span class="map-pin-pill">
@@ -111,14 +128,14 @@
                                 allowfullscreen="" 
                                 loading="lazy" 
                                 referrerpolicy="strict-origin-when-cross-origin"
-                                title="Vasavi Plast Industries Plant Location">
+                                title="Vasavi Pipes Plant Location">
                         </iframe>
                     </div>
 
                     <div class="map-footer-details">
                         <div class="route-info">
                             <strong>Direct Road &amp; Rail Consignment Dispatch:</strong>
-                            <p>Located in the premier transit junction of South Central India, enabling same-day and next-day bulk pipe dispatches across Rayalaseema, Eastern Karnataka, and Telangana.</p>
+                            <p>Located in the premier transit junction of South Central India, enabling reliable bulk pipe dispatches across Rayalaseema, Coastal AP, Eastern Karnataka, and Telangana.</p>
                         </div>
                     </div>
                 </div>
